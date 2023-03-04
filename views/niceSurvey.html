@@ -1,46 +1,117 @@
+
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Questionnaire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
-
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Group 18 UI Questionnaire</title>
   </head>
   
   <body>
+	<div class="topnav">
+		<h1>Group 18 arngren.net Survey</h1>
+		<nav>
+			<a class="active" href="#home">Home</a>
+  			<a href="#surveys">Surveys</a>
+			<a href="#Group18">Group 18</a>
+  			<a href="#argren">Arngren</a>
+  			
+		</nav>
+	</div>
 	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
-    <form>
-      <h2> What fruits(s) do you like? </h2>
-      I like:<br>
-      <input type="text" name="fruit" placeholder="fruit name..." required />
-      <br>
-      <br>
-      <h2> What color(s) do you like? </h2>
-	    I like:<br>
-		  <input type="checkbox" name="color" value="Red"> Red<br>
-		  <input type="checkbox" name="color" value="Green"> Green<br>
-      <input type="checkbox" name="color" value="Blue"> Blue<br>
-      <br>
-      <h2>What is your favorite animal?</h2>
-      I like:<br>
-      <select name="animal">
-			  <option value="Cat" selected="selected">Cat</option>
-			  <option value="Dog">Dog</option>
-			  <option value="Turtle">Turtle</option>
-      </select>
-      <br>
-      <br>
-      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
-      <p id="thanks"></p>
-    </form>
-    </div>
-	<script src="/assets/action.js"></script>
+	
+	<form id="myform" action="index.php" >
+	<br>
+
+	<div class="question">
+		<h2 style="text-align:center;">What are your thoughts on the UI site shown below? (Click on the image to access the site)</h2>	
+		<a href = "https://arngren.net" ><img src="images/Arngren Screenshot.JPG" alt="arngren.net UI Screenshot" width="1000" height="657"></a>
+	</a></div>
+
+	<div class="question">
+		<h2> Personal Information </h2>
+		<p>First name: <input type="text" name="firstname" size="50"></p>
+		<p>Last name: <input type="text" name="lastname" size="50"></p>
+	</div>	
+
+	<div class="question">
+		<h2> Does the website seem easy to navigate? </h2>
+		<input type="radio" name="answer" value="Yes">Yes<br>
+		<input type="radio" name="answer" value="No">No<br>
+	</div>
+
+	<div class="question">
+		<h2>  What element of the site is the most attractive? </h2>
+		<select id="favorite">
+			<option value="colours" selected="selected">The colours</option>
+			<option value="Organization">The Organization</option>
+			<option value="horizontal">Innovative long horizontal scroll</option>
+			<option value="None">None</option>
+		</select>	
+	</div>
+
+	<div class="question">
+		<h2> Which elements of the site could be updated?</h2>
+		<select id="favorite">
+			<option value="colours" selected="selected">The colours</option>
+			<option value="Organization">The Organization</option>
+			<option value="horizontal">Innovative long horizontal scroll</option>
+			<option value="all">All</option>>
+		</select>	
+	</div>
+
+	<div class="question">
+		<h2> What could be done to improve the site? </h2>
+		<textarea rows="5" cols=100%></textarea>
+	</div>
+
+	<div class="question">
+		<h2> Which of the following describes this website? </h2>
+		<input type="checkbox" name="answer" value="modern">Modern<br>
+		<input type="checkbox" name="answer" value="trustworthy">Trustworthy<br>
+		<input type="checkbox" name="answer" value="intuitive">Intuitive<br>
+		<input type="checkbox" name="answer" value="none">None of the above<br>
+		<br>
+		
+	</div>
+
+	<div class="question">
+		<h2> Have any additonal comments? </h2>
+		<textarea rows="5" cols=100%></textarea>
+	</div>
+			
+	<div class="container">
+		<div class="vertical-center">
+		  <button style="color:white; background-color: #69369E; height:100px; width: 250px;">SUBMIT</button>
+		</div>
+	</div>
+		
+	
+	
+	
+	</form>
+
+
+
+	<div class="footer">
+		<ul class="top-line">
+			<li>
+				<ul class ="line_one">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#surveys">Surveys</a></li>
+					<li><a href="#Group18">Group 18</a></li>
+					<li><a href="#argren">ARNGREN</a></li>
+					<li><a href="https://github.com/andreevdan/SEG3125-LABS-Group18/tree/Lab-1">Github</a></li>
+					<li>
+					<p>📝</p>
+					</li>
+				</ul>
+			</li>
+			<li><p id="signature">©Group 18 SEG3125 2023</p></li>
+		</ul>
+	</div>
+	
   </body>
 </html> 
