@@ -59,7 +59,7 @@ module.exports = function(app){
     app.get('/niceSurvey', function(req, res){
         res.sendFile(__dirname+'/views/niceSurvey.html');
         res.sendFile(__dirname+'/public/style/style.css');
-    });
+ });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
