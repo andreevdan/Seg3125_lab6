@@ -31,55 +31,140 @@
 	</a></div>
 
 	<div class="question">
-		<h2> Personal Information </h2>
-		<p>First name: <input type="text" name="firstname" size="50"></p>
-		<p>Last name: <input type="text" name="lastname" size="50"></p>
-	</div>	
+
+	<div class="row">
+		<h2>Personal Information</h2>
+		<div class="col">
+		  <input type="text" name="firstname" class="form-control" placeholder="First name">
+		</div>
+		<div class="col">
+		  <input type="text" class="form-control" name="lastname" placeholder="Last name">
+		</div>
+	  </div>	
+	</div>
 
 	<div class="question">
 		<h2> Does the website seem easy to navigate? </h2>
-		<input type="radio" name="answer" value="Yes">Yes<br>
-		<input type="radio" name="answer" value="No">No<br>
+		<div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="yes">
+			<label class="form-check-label" for="exampleRadios1">
+			  Yes
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="no">
+			<label class="form-check-label" for="exampleRadios2">
+			  No
+			</label>
+		  </div>
 	</div>
 
 	<div class="question">
 		<h2>  What element of the site is the most attractive? </h2>
-		<select id="favorite">
-			<option value="colours" selected="selected">The colours</option>
-			<option value="Organization">The Organization</option>
-			<option value="horizontal">Innovative long horizontal scroll</option>
-			<option value="None">None</option>
-		</select>	
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+			  The Colours
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  The Organization
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+				Innovative long horizontal scroll
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  None
+			</label>
+		  </div>	
 	</div>
 
 	<div class="question">
 		<h2> Which elements of the site could be updated?</h2>
-		<select id="favorite">
-			<option value="colours" selected="selected">The colours</option>
-			<option value="Organization">The Organization</option>
-			<option value="horizontal">Innovative long horizontal scroll</option>
-			<option value="all">All</option>
-		</select>	
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+			  The Colours
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  The Organization
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+				Innovative long horizontal scroll
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  All
+			</label>
+		  </div>	
 	</div>
 
 	<div class="question">
-		<h2> What could be done to improve the site? </h2>
-		<textarea rows="5" cols=100%></textarea>
+		<div class="form-group">
+			<h2>What could be done to improve the site?</h2>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		  </div>
 	</div>
 
 	<div class="question">
 		<h2> Which of the following describes this website? </h2>
-		<input type="checkbox" name="answer" value="modern">Modern<br>
-		<input type="checkbox" name="answer" value="trustworthy">Trustworthy<br>
-		<input type="checkbox" name="answer" value="intuitive">Intuitive<br>
-		<input type="checkbox" name="answer" value="none">None of the above<br>
-		<br>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+			  Modern
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  Trustworthy
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+				Intuitive
+			</label>
+		  </div>
+
+		  <div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+			<label class="form-check-label" for="defaultCheck2">
+			  None of the Above
+			</label>
+		  </div>
 		
 	</div>
 
 	<div class="question">
-		<h2> Have any additonal comments? </h2>
-		<textarea rows="5" cols=100%></textarea>
+		<div class="form-group">
+			<h2>Have any additional comments?</h2>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+		  </div>
 	</div>
 			
 	<div class="container">
@@ -87,9 +172,6 @@
 		  <button style="color:white; background-color: #69369E; height:100px; width: 250px;">SUBMIT</button>
 		</div>
 	</div>
-		
-	
-	
 	
 	</form>
 
