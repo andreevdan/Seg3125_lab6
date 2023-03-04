@@ -51,7 +51,7 @@ module.exports = function(app){
         var question7 = readData("question7");
         var question8 = readData("question8");
         res.render('showResults', {results: [question1, question2, question3, question4, question5, question6, question7, question8]});
-        console.log([color, fruit, animal]);
+        console.log([question1, question2, question3, question4, question5, question6, question7, question8]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
@@ -69,7 +69,7 @@ module.exports = function(app){
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)){
+            if (((key === "question4") || (key === "question5")  || (key === "question6")) && (json[key].length >= 2)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }
@@ -82,6 +82,4 @@ module.exports = function(app){
         // if anyone can figure this out, let me know!
         res.sendFile(__dirname + "/views/niceSurvey.html");
     });
-    
-
 };
