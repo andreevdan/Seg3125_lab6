@@ -1,0 +1,168 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+html {
+   background-image: url("https://wallpaper.dog/large/20366392.jpg");
+ }
+ 
+ 
+  
+ 
+ 
+ h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+ }
+ 
+ h2 {
+   text-align:left;
+ }
+ 
+ img {
+   display: block;
+   margin: 0 auto;
+   box-align: left;
+   border: 5px solid #333;
+   border-radius: 10px;
+ }
+ 
+ p {
+   color: white;
+ }
+ 
+ table {
+    border: 1px solid #333;
+    background-color: #f1f1c1;
+ }
+ 
+ /* Defining styling for a specific element type - each question */
+ .question {
+   background-color: #333;
+   color: white;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 70px;
+   margin-right: 70px;
+   padding: 20px;
+   border-radius: 10px;
+ }
+ 
+ /* Defining styling for a specific element type - large block buttons */
+ .block {
+ 
+   bottom: 20px;
+   left: 30px;
+   float:rght;
+   z-index: 99;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color: #69369E;
+   color: white;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 10px;
+ }
+ 
+ 
+ .img-left {
+   text-align: left;
+   box-align: left;
+ }
+ 
+ /* Defining styling for a specific element with an id */
+ #signature {
+   text-align: right;
+   color: rgb(255, 255, 255);
+   font-style: italic;
+   font-size: 75%;
+ }
+ 
+ .topnav {
+   overflow: hidden;
+   background-color: #333;
+   border-radius: 10px;
+ }
+ 
+ .topnav a {
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ 
+ .topnav a:hover {
+   background-color: #ddd;
+   color: #333;
+ }
+ 
+ .topnav a.active {
+   background-color: #69369E;
+   color: white;
+ }
+ 
+ ul.line-one {
+   display: inline;
+   grid-auto-flow: row;
+   grid-gap: 24px;
+   justify-items: center;
+   margin: auto;
+   list-style-type: none;
+   
+ }
+ 
+ ul.top-line{
+   list-style-type: none;
+   margin-left: auto;
+   margin-right: auto;
+   width: 8em
+ }
+ 
+ 
+ 
+ a {
+   color: white;
+   text-decoration: none;
+   box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+ }
+ 
+ a:hover {
+   box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+ }
+ 
+ li:last-child {
+   grid-column: 1 / 2;
+   grid-row: 1 / 2;
+ }
+ 
+ li:hover ~ li p {
+   animation: wave-animation 0.3s infinite;
+ }
+ 
+ /* below is just for demo styling */
+ 
+ .footer{
+   display: flex;
+   height: 35vh;
+   width: 100%;
+   background-color: #333;
+   line-height: 1.3;
+   font-family: Menlo, monospace;
+ }
+ 
+ 
+ 
+ 
+ .vertical-center {
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+   
+ }
