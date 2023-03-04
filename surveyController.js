@@ -42,10 +42,15 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
+        var question1 = readData("question1");
+        var question2 = readData("question1");
+        var question3 = readData("question1");
+        var question4 = readData("question1");
+        var question5 = readData("question1");
+        var question6 = readData("question1");
+        var question7 = readData("question7");
+        var question8 = readData("question8");
+        res.render('showResults', {results: [question1, question2, question3, question4, question5, question6, question7, question8]});
         console.log([color, fruit, animal]);
     });
 
