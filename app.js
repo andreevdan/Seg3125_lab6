@@ -11,7 +11,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 // static file serving
-app.use(express.static('./public'));
+app.use(express.static('public'));
 
 // fire function from surveyController
 surveyController(app);

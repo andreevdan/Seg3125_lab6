@@ -5,7 +5,7 @@ var fs = require('fs');
 
 // read the data file
 function readData(fileName){
-    let dataRead = fs.readFileSync('./data/' + fileName + '.json');
+    let dataRead = fs.readFileSync(__dirname+'/data/' + fileName + '.json');
     let infoRead = JSON.parse(dataRead);
     return infoRead;
 }
@@ -21,7 +21,7 @@ function writeData(info, fileName){
 // I assume we always just add 1 to a single item
 function combineCounts(name, value){
     // console.log(value);
-    info = readData(name);
+    let info = readData(name);
      // will be useful for text entry, since the item typed in might not be in the list
     var found = 0;
     for (var i=0; i<info.length; i++){
@@ -42,14 +42,14 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var question1 = readData("question1");
-        var question2 = readData("question2");
-        var question3 = readData("question3");
-        var question4 = readData("question4");
-        var question5 = readData("question5");
-        var question6 = readData("question6");
-        var question7 = readData("question7");
-        var question8 = readData("question8");
+        var question1 = readData("firstname");
+        var question2 = readData("lastname");
+        var question3 = readData("easyToNavigate");
+        var question4 = readData("attractiveElements");
+        var question5 = readData("siteUpdates");
+        var question6 = readData("improvement");
+        var question7 = readData("description");
+        var question8 = readData("comment");
         res.render('showResults', {results: [question1, question2, question3, question4, question5, question6, question7, question8]});
         console.log([question1, question2, question3, question4, question5, question6, question7, question8]);
     });
@@ -67,7 +67,6 @@ module.exports = function(app){
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
     app.post('/niceSurvey', urlencodedParser, function(req, res){
-        console.log(req.body);
         var json = req.body;
         for (var key in json){
             console.log(key + ": " + json[key]);
@@ -83,6 +82,6 @@ module.exports = function(app){
         }
         // mystery line... (if I take it out, the SUBMIT button does change)
         // if anyone can figure this out, let me know!
-        res.sendFile(__dirname + "../views/niceSurvey.html");
+        res.sendFile(__dirname + "/views/niceSurvey.html");
     });
 };
