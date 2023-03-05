@@ -27,156 +27,156 @@
 	</div>
 	
 	
-	<form id="myform" action="/niceSurvey" method="POST">
-	<br>
+	<form id="myform" onsubmit="validateFields()" action="/niceSurvey" method="POST">
+		<br>
 
-	<div class="question">
-		<h2 style="text-align:center;">What are your thoughts on the UI site shown below? (Click on the image to access the site)</h2>	
-		<a href = "https://arngren.net" ><img src="images/Arngren_Screenshot.JPG" alt="arngren.net UI Screenshot" width="90%" height="90%"></a>
-	</a></div>
+		<div class="question">
+			<h2 style="text-align:center;">What are your thoughts on the UI site shown below? (Click on the image to access the site)</h2>	
+			<a href = "https://arngren.net" ><img src="images/Arngren_Screenshot.JPG" alt="arngren.net UI Screenshot" width="90%" height="90%"></a>
+		</a></div>
 
-	<div class="question">
+		<div class="question">
 
-	<div class="row">
-		<h2>Personal Information</h2>
-		<div class="col">
-		  <input type="text" name="firstname" class="form-control" placeholder="First name">
+		<div class="row">
+			<h2>Personal Information</h2>
+			<div class="col">
+			<input type="text" name="firstname" class="form-control" placeholder="First name" id="firstName">
+			</div>
+			<div class="col">
+			<input type="text" class="form-control" name="lastname" placeholder="Last name" id="lastName">
+			</div>
+		</div>	
 		</div>
-		<div class="col">
-		  <input type="text" class="form-control" name="lastname" placeholder="Last name">
+
+		<div class="question">
+			<h2> Does the website seem easy to navigate? </h2>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="exampleRadios" id="question3Yes" value="yes">
+				<label class="form-check-label" for="exampleRadios1">
+				Yes
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="exampleRadios" id="question3No" value="no">
+				<label class="form-check-label" for="exampleRadios2">
+				No
+				</label>
+			</div>
 		</div>
-	  </div>	
-	</div>
 
-	<div class="question">
-		<h2> Does the website seem easy to navigate? </h2>
-		<div class="form-check">
-			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="yes">
-			<label class="form-check-label" for="exampleRadios1">
-			  Yes
-			</label>
-		  </div>
-		  <div class="form-check">
-			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="no">
-			<label class="form-check-label" for="exampleRadios2">
-			  No
-			</label>
-		  </div>
-	</div>
+		<div class="question">
+			<h2>  What element of the site is the most attractive? </h2>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question4_A">
+				<label class="form-check-label" for="defaultCheck1">
+				The Colours
+				</label>
+			</div>
 
-	<div class="question">
-		<h2>  What element of the site is the most attractive? </h2>
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-			  The Colours
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question4_B">
+				<label class="form-check-label" for="defaultCheck2">
+				The Organization
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  The Organization
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question4_C">
+				<label class="form-check-label" for="defaultCheck1">
+					Innovative long horizontal scroll
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-				Innovative long horizontal scroll
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question4_D">
+				<label class="form-check-label" for="defaultCheck2">
+				None
+				</label>
+			</div>	
+		</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  None
-			</label>
-		  </div>	
-	</div>
+		<div class="question">
+			<h2> Which elements of the site could be updated?</h2>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question5_A">
+				<label class="form-check-label" for="defaultCheck1">
+				The Colours
+				</label>
+			</div>
 
-	<div class="question">
-		<h2> Which elements of the site could be updated?</h2>
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-			  The Colours
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question5_B">
+				<label class="form-check-label" for="defaultCheck2">
+				The Organization
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  The Organization
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question5_C">
+				<label class="form-check-label" for="defaultCheck1">
+					Innovative long horizontal scroll
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-				Innovative long horizontal scroll
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question5_D">
+				<label class="form-check-label" for="defaultCheck2">
+				All
+				</label>
+			</div>	
+		</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  All
-			</label>
-		  </div>	
-	</div>
+		<div class="question">
+			<div class="form-group">
+				<h2>What could be done to improve the site?</h2>
+				<textarea class="form-control" id="question6" rows="3"></textarea>
+			</div>
+		</div>
 
-	<div class="question">
-		<div class="form-group">
-			<h2>What could be done to improve the site?</h2>
-			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-		  </div>
-	</div>
+		<div class="question">
+			<h2> Which of the following describes this website? </h2>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question7_A">
+				<label class="form-check-label" for="defaultCheck1">
+				Modern
+				</label>
+			</div>
 
-	<div class="question">
-		<h2> Which of the following describes this website? </h2>
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-			  Modern
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question7_B">
+				<label class="form-check-label" for="defaultCheck2">
+				Trustworthy
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  Trustworthy
-			</label>
-		  </div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question7_C">
+				<label class="form-check-label" for="defaultCheck1">
+					Intuitive
+				</label>
+			</div>
 
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-				Intuitive
-			</label>
-		  </div>
-
-		  <div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-			<label class="form-check-label" for="defaultCheck2">
-			  None of the Above
-			</label>
-		  </div>
-		
-	</div>
-
-	<div class="question">
-		<div class="form-group">
-			<h2>Have any additional comments?</h2>
-			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-		  </div>
-	</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="question7_D">
+				<label class="form-check-label" for="defaultCheck2">
+				None of the Above
+				</label>
+			</div>
 			
-	<div class="container">
-		<div class="vertical-center">
-		  <button style="color:white; background-color: #69369E; height:100px; width: 250px;">SUBMIT</button>
 		</div>
-	</div>
+
+		<div class="question">
+			<div class="form-group">
+				<h2>Have any additional comments?</h2>
+				<textarea class="form-control" id="question8_comment" rows="3"></textarea>
+			</div>
+		</div>
+				
+		<div class="container">
+			<div class="vertical-center">
+			<button style="color:white; background-color: #69369E; height:100px; width: 250px;">SUBMIT</button>
+			</div>
+		</div>
 	
 	</form>
 
@@ -198,13 +198,38 @@
 		</ul>
 	</div>
 	
+	<script>
+		function validateFields() {
+			var firstName 			= document.getElementById("firstName");
+			var lastName 			= document.getElementById("lastName");
+			var question3Yes 		= document.getElementById("question3Yes");
+			var question3No 		= document.getElementById("question3No");
+			var question4_A 		= document.getElementById("question4_A");
+			var question4_B 		= document.getElementById("question4_B");
+			var question4_C 		= document.getElementById("question4_C");
+			var question4_D 		= document.getElementById("question4_D");
+			var question5_A 		= document.getElementById("question5_A");
+			var question5_B 		= document.getElementById("question5_B");
+			var question5_C 		= document.getElementById("question5_C");
+			var question5_D 		= document.getElementById("question5_D");
+			var question6 			= document.getElementById("question6");
+			var question7_A 		= document.getElementById("question7_A");
+			var question7_B 		= document.getElementById("question7_B");
+			var question7_C 		= document.getElementById("question7_C");
+			var question7_D 		= document.getElementById("question7_D");
+			var question8_comment 	= document.getElementById("question8_comment");
+
+			var validForm = true;
+
+			if(firstName == ""|| lastName == ""){
+				event.preventDefault();
+				alert();
+				return;
+			}
+
+		}
+	</script>
+
   </body>
-
-
-
-
-
-
-
 
 </html>

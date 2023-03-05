@@ -67,6 +67,11 @@ module.exports = function(app){
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
     app.post('/niceSurvey', urlencodedParser, function(req, res){
+        var firstName = document.getElementById("firstName");
+        var lastName = document.getElementById("lastName");
+        if(firstName == "" || lastName == ""){
+            console.log("First or Last Name is empty");
+        }
         console.log(req.body);
         var json = req.body;
         for (var key in json){
