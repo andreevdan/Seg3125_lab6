@@ -71,7 +71,7 @@ module.exports = function(app){
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if (((key === "question4") || (key === "question5")  || (key === "question6")) && (json[key].length >= 2)){
+            if (((key === "attractiveElements") || (key === "siteUpdates")  || (key === "description")) && (json[key].length >= 2)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }
