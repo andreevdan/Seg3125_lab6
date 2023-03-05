@@ -44,7 +44,7 @@ module.exports = function(app){
     app.get('/analysis', function(req, res){
         var question1 = readData("firstname");
         var question2 = readData("lastname");
-        var question3 = readData("easyToNavigate");
+        var question3 = readData("exampleRadios");
         var question4 = readData("attractiveElements");
         var question5 = readData("siteUpdates");
         var question6 = readData("improvement");
