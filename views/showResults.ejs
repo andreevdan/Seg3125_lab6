@@ -8,7 +8,7 @@
     <h2>Does the website seem easy to navigate</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].improvement> :  <%= results[0][i].count %></li>
+        <li><%= results[0][i].improvement + ": " + results[0][i].count %></li>
     <% } %>    
     </ul>
     <h2>What element of the site is the most attractive?</h2>
