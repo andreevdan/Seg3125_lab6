@@ -200,33 +200,60 @@
 	
 	<script>
 		function validateFields() {
-			var firstName 			= document.getElementById("firstName");
-			var lastName 			= document.getElementById("lastName");
-			var question3Yes 		= document.getElementById("question3Yes");
-			var question3No 		= document.getElementById("question3No");
-			var question4_A 		= document.getElementById("question4_A");
-			var question4_B 		= document.getElementById("question4_B");
-			var question4_C 		= document.getElementById("question4_C");
-			var question4_D 		= document.getElementById("question4_D");
-			var question5_A 		= document.getElementById("question5_A");
-			var question5_B 		= document.getElementById("question5_B");
-			var question5_C 		= document.getElementById("question5_C");
-			var question5_D 		= document.getElementById("question5_D");
-			var question6 			= document.getElementById("question6");
-			var question7_A 		= document.getElementById("question7_A");
-			var question7_B 		= document.getElementById("question7_B");
-			var question7_C 		= document.getElementById("question7_C");
-			var question7_D 		= document.getElementById("question7_D");
-			var question8_comment 	= document.getElementById("question8_comment");
+			//Only Q8 is not checked since it's optional
+			var firstName 			= document.getElementById("firstName").value;
+			var lastName 			= document.getElementById("lastName").value;
+			var question3Yes 		= document.getElementById("question3Yes").checked;
+			var question3No 		= document.getElementById("question3No").checked;
+			var question4_A 		= document.getElementById("question4_A").checked;
+			var question4_B 		= document.getElementById("question4_B").checked;
+			var question4_C 		= document.getElementById("question4_C").checked;
+			var question4_D 		= document.getElementById("question4_D").checked;
+			var question5_A 		= document.getElementById("question5_A").checked;
+			var question5_B 		= document.getElementById("question5_B").checked;
+			var question5_C 		= document.getElementById("question5_C").checked;
+			var question5_D 		= document.getElementById("question5_D").checked;
+			var question6 			= document.getElementById("question6").value;
+			var question7_A 		= document.getElementById("question7_A").checked;
+			var question7_B 		= document.getElementById("question7_B").checked;
+			var question7_C 		= document.getElementById("question7_C").checked;
+			var question7_D 		= document.getElementById("question7_D").checked;
 
-			var validForm = true;
-
-			if(firstName == ""|| lastName == ""){
+			if(firstName == ""|| lastName.value == ""){
 				event.preventDefault();
-				alert();
+				alert("Form not submitted - Please enter your First and Last Name before submitting");
 				return;
 			}
 
+			if(question3Yes == false && question3No == false){
+				event.preventDefault();
+				alert("Form not submitted - Please answer Question 3 before submitting");
+				return;
+			}
+
+			if(question4_A == false && question4_B == false && question4_C == false && question4_D == false){
+				event.preventDefault();
+				alert("Form not submitted - Please answer Question 4 before submitting");
+				return;
+			}
+
+			if(question5_A == false && question5_B == false && question5_C == false && question5_D == false){
+				event.preventDefault();
+				alert("Form not submitted - Please answer Question 5 before submitting");
+				return;
+			}
+			
+			if(question6 == ""){
+				event.preventDefault();
+				alert("Form not submitted - Please answer Question 6 before submitting");
+				return;
+			}
+			
+			if(question7_A == false && question7_B == false && question7_C == false && question7_D == false){
+				event.preventDefault();
+				alert("Form not submitted - Please answer Question 7 before submitting");
+				return;
+			}
 		}
 	</script>
 
