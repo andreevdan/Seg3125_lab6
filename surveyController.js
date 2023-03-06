@@ -19,22 +19,42 @@ function writeData(info, fileName){
 // update the data file, I use "name" to be equal to fruit, or animal or color
 // to match with the file names
 // I assume we always just add 1 to a single item
-function combineCounts(name, value){
-    // console.log(value);
+function combineCounts(name, value) {
     let info = readData(name);
-     // will be useful for text entry, since the item typed in might not be in the list
-    var found = 0;
-    for (var i=0; i<info.length; i++){
-        if (info[i][name] === value){
+    // will be useful for text entry, since the item typed in might not be in the list
+    let found = false;
+  
+    if (Array.isArray(value)) {
+      // if value is an array (i.e., multiple checkboxes selected), iterate over each value
+      value.forEach(val => {
+        for (let i = 0; i < info.length; i++) {
+          if (info[i][name] === val) {
             info[i].count = parseInt(info[i].count) + 1;
-            found = 1;
+            found = true;
+            break;
+          }
         }
+        if (!found) {
+          info.push({ [name]: val, count: 1 });
+        }
+      });
+    } else {
+      // if value is not an array (i.e., single checkbox selected), update the count for the single value
+      for (let i = 0; i < info.length; i++) {
+        if (info[i][name] === value) {
+          info[i].count = parseInt(info[i].count) + 1;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        info.push({ [name]: value, count: 1 });
+      }
     }
-    if (found === 0){
-        info.push({[name] : value, count: 1});
-    }
+  
     writeData(info, name);
-}
+  }
+  
 
 // This is the controler per se, with the get/post
 module.exports = function(app){
@@ -76,7 +96,6 @@ module.exports = function(app){
             // in the case of checkboxes, the user might check more than one
             if (((key === "attractiveElements") || (key === "siteUpdates")  || (key === "description")) && (json[key].length >= 2)){
                 combineCounts(key, json[key]);
-                
             }
             else {
                 combineCounts(key, json[key]);
