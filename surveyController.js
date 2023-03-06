@@ -41,7 +41,7 @@ function combineCounts(name, value) {
     } else {
       // if value is not an array (i.e., single checkbox selected), update the count for the single value
       for (let i = 0; i < info.length; i++) {
-        if (info[i][name] === value) {
+        if (info[i][name].toUpperCase() === value.toUpperCase()) {
           info[i].count = parseInt(info[i].count) + 1;
           found = true;
           break;
