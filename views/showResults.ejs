@@ -7,20 +7,40 @@
     <h1>Survey analysis</h1>
     <h2>Does the website seem easy to navigate</h2>
     <ul>
-    <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].improvement + ": " + results[0][i].count %></li>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].exampleRadios + ": " + results[2][i].count %></li>
     <% } %>    
     </ul>
     <h2>What element of the site is the most attractive?</h2>
     <ul>
-    <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].attractiveElements %> :  <%= results[1][i].count %></li>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].attractiveElements %> :  <%= results[3][i].count %></li>
     <% } %>    
     </ul>
     <h2>Which elements of the site could be updated?</h2>
     <ul>
-    <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].comment %> :  <%= results[2][i].count %></li>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].siteUpdates %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    </ul>
+    <h2>Which could be done to improve the site?</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].improvement %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+    </ul>
+    <h2>Which of the following describes the website?</h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].description %> :  <%= results[6][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Have any additional comments?</h2>
+    <ul>
+    <% for (var i=0; i<results[7].length; i++){ %>
+        <li><%= results[7][i].comment %> :  <%= results[7][i].count %></li>
     <% } %>    
     </ul>
 </body>
